@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+require('./vendor/autoload.php');
+
 $debug = 0;
 try{
     $db = new PDO("mysql:host=localhost;dbname=autobonplan", 'root', '');
