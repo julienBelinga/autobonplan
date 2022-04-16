@@ -24,6 +24,7 @@
             </ul>
         </section>
         <div class="page-content">
+            <?php include('../src/test.php'); ?>
         </div>
     </div>
 </body>
