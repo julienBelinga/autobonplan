@@ -1,8 +1,7 @@
 <?php
+require('../database/db.php');
 
-require('../database/config_db.php');
-
-// register form
+//register form
 if(!empty($_POST['email']) && !empty($_POST['password'])){
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -33,6 +32,8 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap" rel="stylesheet">
 </head>
+<header class="police">
+</header>
 <body>
 
     <div id="main-container">
@@ -42,7 +43,7 @@ if(!empty($_POST['email']) && !empty($_POST['password'])){
                 <button type="button" class="toggle-btn" onclick="login()">Login</button>
                 <button type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
-            <form id="login" class="input-group" method="POST" action="profile.php">
+            <form id="login" class="input-group" method="POST" action="login.php">
                 <input class="input-field" type="email" placeholder="Email" name="email"></br>
                 <input class="input-field" type="password" placeholder="Password" name="password"></br>
                 <input class="input-field" type="text" placeholder="verification code" name="tfa_code"></br>

@@ -1,9 +1,9 @@
 <?php
-
 session_start();
-require('./vendor/autoload.php');
+require('../vendor/autoload.php');
 
-$debug = 0;
+$debug=0;
+
 try{
     $db = new PDO("mysql:host=localhost;dbname=autobonplan", 'root', '');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

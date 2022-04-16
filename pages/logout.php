@@ -3,5 +3,5 @@ require('../database/db.php');
 
 $_SESSION = [];
 session_destroy();
-header('location:/mspr_reseau_grp5/pages/index.php');
+header('location:/autobonplan/pages/index.php');
 exit();
