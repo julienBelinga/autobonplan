@@ -9,7 +9,7 @@
         $cellIterration = $row->getCellIterator();
         $cellIterration->setIterateOnlyExistingCells(false);
 
-        echo '<table>';
+        echo '<table border="1" align="left">';
             echo '<tr>';
 
         foreach($cellIterration as $cell){
