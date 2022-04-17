@@ -1,11 +1,10 @@
 <?php
     require'../vendor/autoload.php';
-
+    error_reporting(E_ERROR | E_PARSE); // hide warning message
     $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
 
     $spreadsheet = $reader->load('../arrivages.xlsx');
     $worksheet = $spreadsheet->getActiveSheet();
-
     $vehicule = array(
         'nb_VO'                     => null,
         'etat'                      => null,
@@ -60,7 +59,7 @@
     );
 
     $highestRow = $worksheet->getHighestRow();
-
+    #get the excel cells into an array
     for($row=2; $row <= $highestRow; $row++){
         $nb_VO = $row -2;
         $vehicule[$nb_VO]->nb_VO= $nb_VO;
@@ -116,7 +115,8 @@
     }
 
     foreach($vehicule as $key => $value){
+        echo '<pre>';
         print_r($value);
-        echo '<br>';
-    }
+        echo '</pre>';
+    }   
 ?>
