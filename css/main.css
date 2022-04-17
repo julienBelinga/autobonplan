@@ -141,3 +141,7 @@ img{
 .container-logo img{
     margin: auto;
 }
+
+a.canvasjs-chart-credit{
+    display: none;
+}

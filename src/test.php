@@ -114,9 +114,6 @@
         $vehicule[$nb_VO]->dispo_le= $worksheet->getCellByColumnAndRow(50, $row)->getValue();
     }
 
-    foreach($vehicule as $key => $value){
-        echo '<pre>';
-        print_r($value);
-        echo '</pre>';
-    }   
+    include('graph/energies.php');    
+
 ?>
