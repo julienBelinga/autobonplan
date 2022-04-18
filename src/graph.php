@@ -136,5 +136,11 @@
             include('graph/table.php');
             break;
 
+        default:
+            echo '<form action="../src/upload.php" method="POST" enctype="multipart/form-data">';
+                echo '<input type="file" name="file">';
+                echo '<button type="submit" name="submit">importer</button>';
+            echo '</form>';
+            break;
     }
 ?>
