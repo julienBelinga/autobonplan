@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/effect.css">
     <link rel="stylesheet" type="text/css" href="../css/table.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,11 +24,56 @@
             </div>
             <ul>
                 <!-- TODO: pass parameter via URL -->
-                <li><a href="?graph=1"></a>Energies</li>
-                <li><a href="?graph=2"></a>Prix</li>
-                <li><a href="?graph=3"></a>Mois</li>
-                <li><a href="?graph=4"></a>Bénéfice</li>
-                <li><a href="?graph=5"></a>Tableau</li>
+                <a href="?graph=1">
+                    <li>
+                        <div class="deconstructed">Energies
+                            <div>Energies</div>
+                            <div>Energies</div>
+                            <div>Energies</div>
+                            <div>Energies</div>
+                        </div>
+                    </li>
+                </a>
+                <a href="?graph=2">
+                    <li>
+                        <div class="deconstructed">Prix
+                            <div>Prix</div>
+                            <div>Prix</div>
+                            <div>Prix</div>
+                            <div>Prix</div>
+                        </div>
+                    </li>
+                </a>
+                <a href="?graph=3">
+                    <li>
+                        <div class="deconstructed">Mois
+                            <div>Mois</div>
+                            <div>Mois</div>
+                            <div>Mois</div>
+                            <div>Mois</div>
+                        </div>
+                    </li>
+                </a>
+                <a href="?graph=4">
+                    <li>
+                        <div class="deconstructed">Bénéfice
+                            <div>Bénéfice</div>
+                            <div>Bénéfice</div>
+                            <div>Bénéfice</div>
+                            <div>Bénéfice</div>
+                        </div>
+                    </li>
+                </a>
+                <a href="?graph=5">
+                    <li>
+                        <div class="deconstructed">Tableau
+                            <div>Tableau</div>
+                            <div>Tableau</div>
+                            <div>Tableau</div>
+                            <div>Tableau</div>
+                        </div>
+                    </li>
+                </a>
             </ul>
         </section>
         <div class="page-content">
