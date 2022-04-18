@@ -21,6 +21,12 @@
                 <img src="https://communication.autobonplan.com/abp-home/img/Logo_Autobonplan.png" alt="">
             </div>
             <ul>
+                <!-- TODO: pass parameter via URL -->
+                <li><a href=""></a>Energies</li>
+                <li><a href=""></a>Prix</li>
+                <li><a href=""></a>Mois</li>
+                <li><a href=""></a>Bénéfice</li>
+                <li><a href=""></a>Tableau</li>
             </ul>
         </section>
         <div class="page-content">

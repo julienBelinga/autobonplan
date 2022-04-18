@@ -8,17 +8,20 @@
  
 	foreach($vehicule as $key => $value){
 		#FIXME: moving to PHP8.1 strstr() -> str_contains()
+		$string = explode(" ", $value->energie);
 
-        if(strstr($value->energie, 'Diesel'))
-			$diesel += 1;
-		elseif(strstr($value->energie, 'Essence'))
-			$essence += 1;
-		elseif(strstr($value->energie, 'plomb'))
-			$essence_sans_plomb += 1;
-		elseif(strstr($value->energie, 'électrique'))
-			$electrique += 1;
-		elseif(strstr($value->energie, 'gaz'))
-			$gaz += 1;	
+		for($i=0; $i < count($string); $i++){
+			if(strstr($string[$i], 'Diesel'))
+				$diesel += 1;
+			elseif(strstr($string[$i], 'Essence'))
+				$essence += 1;
+			elseif(strstr($string[$i], 'plomb'))
+				$essence_sans_plomb += 1;
+			elseif(strstr($string[$i], 'électrique'))
+				$electrique += 1;
+			elseif(strstr($string[$i], 'gaz'))
+				$gaz += 1;	
+		}
     }
 
 	$dataPoints = array(
@@ -40,7 +43,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		text: "Energies"
 	},
 	subtitles: [{
-		text: "Currency Used: Thai Baht (฿)"
+		text: ""
 	}],
 	data: [{
 		type: "pie",
