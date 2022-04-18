@@ -1,0 +1,16 @@
+table{
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+tr{
+    display: grid;
+}
+td{
+    height: 18px;
+    border:  solid 1px;
+}
+td:first-of-type{
+    background-color: #004AAD;
+    color: #fff;
+    font-weight: bold;
+}

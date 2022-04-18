@@ -31,7 +31,7 @@ img{
     background: #f1eff0;
     padding-bottom: 20px;
     min-height: 90vh;
-    overflow: scroll;
+    /* overflow: scroll; */
 }
 
 /*header*/

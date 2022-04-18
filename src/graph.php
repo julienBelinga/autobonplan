@@ -59,6 +59,7 @@
     );
 
     $highestRow = $worksheet->getHighestRow();
+
     #get the excel cells into an array
     for($row=2; $row <= $highestRow; $row++){
         $nb_VO = $row -2;
@@ -114,6 +115,26 @@
         $vehicule[$nb_VO]->dispo_le= $worksheet->getCellByColumnAndRow(50, $row)->getValue();
     }
 
-    include('graph/energies.php');    
+    $graph_state = $_GET['graph'];
 
+    switch($graph_state){
+        case 1:
+            include('graph/energies.php');
+            break;
+        
+        case 2:
+            include('graph/prix.php');
+            break;
+
+        case 3:
+            break;
+
+        case 4:
+            break;
+
+        case 5:
+            include('graph/table.php');
+            break;
+
+    }
 ?>
