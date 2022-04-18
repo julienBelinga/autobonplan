@@ -28,4 +28,6 @@ if(isset($_POST['submit'])){
 
 }
 
+include('DBupload.php');
+
 ?>
