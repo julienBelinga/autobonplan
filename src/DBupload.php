@@ -55,40 +55,23 @@ require('../database/db.php');
         return $string;
     }
 
-    function decryption($string){}
-
-    //TODO: delete when done
-        $string = '';
-        foreach($worksheet->getRowIterator(2) as $row){
-            $cellIterration = $row->getCellIterator();
-            $cellIterration->setIterateOnlyExistingCells(false);
-        
-            foreach($cellIterration as $cell){
-                $string .=strval($cell->getValue());
-                $string .='/';
-            }
-            $string .= 'end';
-        }
-
-
-
-    //dechifrage
-        //separate rows
+    function decryption($string){
         $row = explode('end', $string);
+        $tabRow = [];
         $data = [];
         
-        for($i=0; $i<count($row); $i++){
-            //separate cells
-            $cell = explode('/', $string);
-            for($i=0; $i<count($cell); $i++){
-                if($cell[$i] == 'end'){unset($cell[$i]);}
-                $data[] = $cell[$i];
+        for($i=0; $i<count($row)-1; $i++){
+            
+            $tabRow[] = $row[$i];
+            $cell = explode('/', $tabRow[$i]);
+            for($j=0; $j<count($cell); $j++){
+                if($cell[$j] == 'end'){unset($cell[$j]);}
+                $data[$i][] = $cell[$j];
             }
         }
 
-        echo '<pre>';
-            print_r($data);
-        echo '</pre>';
+        return $data;
+    }
 
         
 ?>
