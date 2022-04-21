@@ -23,7 +23,6 @@
                 <img src="https://communication.autobonplan.com/abp-home/img/Logo_Autobonplan.png" alt="">
             </div>
             <ul>
-                <!-- TODO: pass parameter via URL -->
                 <a href="?graph=1">
                     <li>
                         <div class="deconstructed">Energies
