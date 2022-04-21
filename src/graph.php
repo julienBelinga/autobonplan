@@ -6,6 +6,7 @@
     $spreadsheet = $reader->load('../arrivages.xlsx');
     $worksheet = $spreadsheet->getActiveSheet();
     $vehicule = array(
+        // TODO: put real type for each or cast to string(easier)
         'nb_VO'                     => null,
         'etat'                      => null,
         'fournisseur'               => null,
