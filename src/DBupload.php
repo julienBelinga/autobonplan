@@ -1,7 +1,7 @@
 <?php
 require('../database/db.php');
 
-/* TODO: protocol:
+/*protocol:
         envoie BDD
         - parse row excel
         - cast en string
@@ -13,8 +13,18 @@ require('../database/db.php');
         - mettre dans le tableau associatif
 */
 
+
+// TODO: get the uploaded excel
     $excelInTab = [];
     $excelSheet = encryption($worksheet);
+
+    try{
+        $sql = $db->prepare('INSERT INTO excel (string) VALUES ('.$excelSheet.')');
+        $res = $sql->execute();
+    }catch(Exception $ex){
+        echo $ex->getMessage. '<br>';
+    }
+
     $excelInTab = decryption($excelSheet);
                 
     function encryption ($worksheet){
